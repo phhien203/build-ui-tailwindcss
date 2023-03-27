@@ -11,12 +11,27 @@ function App() {
         ))}
       </div>
       <div className="flex flex-col w-60 bg-gray-700">
-        <div className="p-4 shadow-md">Tailwind CSS</div>
-        <div className="flex-1 p-4">channels</div>
+        <div className="px-3 h-12 shadow-md flex items-center">
+          Tailwind CSS
+        </div>
+        <div className="flex-1 p-3 overflow-y-auto space-y-2">
+          {[...Array(40)].map((_, i) => (
+            <p>channel {i + 1}</p>
+          ))}
+        </div>
       </div>
       <div className="flex flex-col flex-1 bg-gray-600">
-        <div className="p-4 shadow-md">general</div>
-        <div className="flex-1 p-4">messages</div>
+        <div className="px-3 h-12 shadow-md flex items-center">general</div>
+        <div className="flex-1 px-3 space-y-4 overflow-y-auto">
+          {[...Array(40)].map((_, i) => (
+            <p key={i}>
+              Message {i}. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Vel saepe laudantium sed reprehenderit incidunt! Hic rem
+              quos reiciendis, fugit quae ratione beatae veniam laborum
+              voluptatem, iusto dolorum, voluptates suscipit quia.
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
